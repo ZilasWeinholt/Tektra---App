@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tektra A/S Webapp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #002060;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header img {
+            height: 50px;
+        }
+        .container {
+            margin: 20px;
+        }
+        .login-section, .button-grid {
+            text-align: center;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .button-grid button {
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .button-grid button:hover {
+            background-color: #005a9e;
+        }
+        footer {
+            background-color: #002060;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="tektra-logo.png" alt="Tektra A/S Logo">
+        <h1>Velkommen til Tektra A/S</h1>
+    </header>
+
+    <div class="container">
+        <!-- Login Section -->
+        <div class="login-section">
+            <h2>Log ind</h2>
+            <form>
+                <label for="username">Brugernavn:</label><br>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Adgangskode:</label><br>
+                <input type="password" id="password" name="password" required><br><br>
+                <label for="user-type">Log ind som:</label><br>
+                <select id="user-type" name="user-type">
+                    <option value="customer">Kunde</option>
+                    <option value="employee">Medarbejder</option>
+                </select><br><br>
+                <button type="submit">Log ind</button>
+            </form>
+            <p>Ingen konto? <a href="#">Opret bruger</a></p>
+        </div>
+
+        <!-- Button Grid Section -->
+        <div class="button-grid">
+            <button>Produkter</button>
+            <button>Afdelinger</button>
+            <button>Ring til næst ledige medarbejder</button>
+            <button>Service</button>
+            <button>Kontaktoplysninger</button>
+            <button>Bliv kontaktet af en sælger</button>
+            <button>Rental</button>
+            <button>Salgs- og leveringsbetingelser</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Tektra A/S - Alle rettigheder forbeholdes.
+    </footer>
+</body>
+</html>
